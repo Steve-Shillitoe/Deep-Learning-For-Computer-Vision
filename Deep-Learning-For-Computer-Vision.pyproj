@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>b8d15d53-22b4-4cc1-aa40-5d7c2d366d00</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Deep_Learning_For_Computer_Vision.py</StartupFile>
+    <StartupFile>Convolutional_Neural_Network.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,7 +22,8 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Deep_Learning_For_Computer_Vision.py" />
+    <Compile Include="Convolutional_Neural_Network.py" />
+    <Compile Include="Data_Classification.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
