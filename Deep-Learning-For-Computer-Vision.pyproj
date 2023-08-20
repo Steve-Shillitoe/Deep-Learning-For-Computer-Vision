@@ -22,6 +22,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Deep_Learning_On_Custom_Images.py" />
     <Compile Include="Keras_CNN_With_MNIST.py" />
     <Compile Include="Data_Classification.py" />
     <Compile Include="Keras_CNN_With_CIFAR_10.py" />
