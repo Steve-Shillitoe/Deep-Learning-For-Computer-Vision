@@ -25026,6 +25026,7 @@
     <Content Include="CATS_DOGS\train\DOG\998.jpg" />
     <Content Include="CATS_DOGS\train\DOG\999.jpg" />
     <Content Include="cat_dog_100epochs.h5" />
+    <Content Include="README.md" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
