@@ -1,18 +1,25 @@
-#from msilib import Feature
+"""
+In this module a machine learning model is created using keras to determine if a banknote is legitimate
+or a forgery. 
+
+A dataset was created from images of banknotes and then numerical features were extracted from wavelets of
+these images. 
+
+The machine learning module is trained using this dataset in the form a CSV file.
+"""
 import numpy as np
 from numpy import genfromtxt
 
 from keras.models import Sequential
 from keras.layers import Dense
-from keras.models import load_model
 
 # For data preprocessing and splitting
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import confusion_matrix, classification_report
+from sklearn.metrics import classification_report
 
 
 data = genfromtxt('bank_note_data.txt', delimiter=',')
-labels = data[:,4] #last column
+labels = data[:,4] #last column 0=forged bank note, 1=legitimate bank note
 features = data[:,0:4]
 X = features
 y = labels
@@ -20,7 +27,7 @@ y = labels
 #print(labels)
 #print(features)
 
-# Split dataset into train and test sets (using a 67-33 split)
+# Split dataset into training and test sets (using a 67-33 split)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)
 
 #Feature scaling helps to normalize the range of independent variables (features) in a dataset. 

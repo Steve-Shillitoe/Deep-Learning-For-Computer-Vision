@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>b8d15d53-22b4-4cc1-aa40-5d7c2d366d00</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Keras_CNN_MNIST_Fashion_Dataset.py</StartupFile>
+    <StartupFile>1_Data_Classification.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -25,7 +25,7 @@
     <Compile Include="Deep_Learning_On_Custom_Images.py" />
     <Compile Include="Keras_CNN_MNIST_Fashion_Dataset.py" />
     <Compile Include="Keras_CNN_With_MNIST.py" />
-    <Compile Include="Data_Classification.py" />
+    <Compile Include="1_Data_Classification.py" />
     <Compile Include="Keras_CNN_With_CIFAR_10.py" />
   </ItemGroup>
   <ItemGroup>
