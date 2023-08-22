@@ -1,3 +1,18 @@
+"""
+The MNIST dataset contains grayscale 28x28 pixel images of handwritten single digits from 0-9.
+As we are dealing with images, in this module a Convolutional Neural Network is built using Keras 
+to classify the images of handwritten digits. 
+
+The MNIST dataset has 60,000 training images and 10,000 test images.
+Each array of images has 4 dimensions (60000, 28, 28, 1) or (image number, x, y, colour channel)
+
+One-hot encoding is used for the labels. So instead of using labels such as 'one', 'two' etc, 
+each image will have an array of 10 cells, where the label is represented by a one in its index position
+and zeros in the other positions. So a drawn digit of 4 would have the following label array 
+[0,0,0,0,1,0,0,0,0,0]
+This works well with an output layer of 10 neurons where an activation function is chosen 
+that fires either a 0 or a 1.
+"""
 from keras.datasets import mnist
 from keras.utils import to_categorical
 from keras.models import Sequential
