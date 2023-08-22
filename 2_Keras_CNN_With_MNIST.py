@@ -6,7 +6,7 @@ to classify the images of handwritten digits.
 The MNIST dataset has 60,000 training images and 10,000 test images.
 Each array of images has 4 dimensions (60000, 28, 28, 1) or (image number, x, y, colour channel)
 
-One-hot encoding is used for the labels. So instead of using labels such as 'one', 'two' etc, 
+One-hot encoding is used for the labels. So instead of using categorical labels such as 'one', 'two' etc, 
 each image will have an array of 10 cells, where the label is represented by a one in its index position
 and zeros in the other positions. So a drawn digit of 4 would have the following label array 
 [0,0,0,0,1,0,0,0,0,0]

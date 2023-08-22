@@ -57,8 +57,10 @@ model.add(Dense(units=4, input_dim=4, activation='relu')) #4 units because data 
 model.add(Dense(units=8, activation='relu'))
 #Output layer
 #Only one nueron, as the output is binary. 
-#Sigmoid Activation (logistic function): This function squashes the input into the range (0, 1),
-# making it suitable for binary classification problems where the output needs to represent probabilities.
+#Sigmoid Activation (logistic function): This function transforms the input into the range (0, 1),
+# making it suitable for binary classification problems where the output needs to represent probabilities. 
+#If the probability is above a certain threshold (often 0.5), the input is classified into one class;
+# otherwise, it's classified into the other.
 model.add(Dense(units=1, activation='sigmoid'))
 
 #compile the model
