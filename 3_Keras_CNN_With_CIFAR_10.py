@@ -1,3 +1,8 @@
+"""
+In this module keras is used to classify colour images. 
+
+The image labels are integer catgories and they are one-hot encoded. 
+"""
 from keras.datasets import cifar10 #colour images, therefore 3 colour channels
 from keras.utils import to_categorical
 from keras.models import Sequential
