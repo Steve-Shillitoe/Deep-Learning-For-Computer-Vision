@@ -1,3 +1,12 @@
+"""
+In this module an image classifier is build using Keras and a convolution neural network 
+and applied to the Fashion MNIST dataset.  
+
+This dataset contains 70,000 28x28 grayscale images of fashion products from 10 categories 
+from a dataset of Zalando article images, with 7,000 images per category.
+The training set consists of 60,000 images and the test set consists of 10,000 images. 
+"""
+
 from keras.models import Sequential
 from keras.utils import to_categorical
 from keras.layers import Flatten, Conv2D, MaxPooling2D, Dense

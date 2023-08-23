@@ -1,5 +1,8 @@
 """
-In this module keras is used to classify colour images. 
+In this module keras is used to classify colour images in the CIFAR-10 dataset. 
+The CIFAR-10 dataset contains 60,000 32x32 color images in 10 different classes.
+The 10 different classes represent airplanes, cars, birds, cats, deer, dogs, frogs, horses, ships, and trucks. 
+There are 6,000 images of each class.
 
 The image labels are integer catgories and they are one-hot encoded. 
 """
