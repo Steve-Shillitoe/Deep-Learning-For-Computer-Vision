@@ -1,5 +1,21 @@
+"""
+In this module an image classifier is created using Keras and a convolutional neural network.  
+It is used to classify images of cats & dogs in the form of  raw colour jpeg files of various sizes. 
+In each convolutional layer, the size of each image is increased/decreased to the 
+same size, 150x150 pixels
+
+The ImageDataGenerator from the Keras preprocessing module is used to add random transformations to the 
+images to make the model training more challenging and thus make the model more robust. 
+
+The cat & dog images are stored in the CATS_DOGS folder.
+
+Due to the complexity of the images, the model would require 100 epochs to train.
+So to save time, an existing model, cat_dog_100epochs.h5 is loaded & used to make
+predictions. 
+
+"""
+
 import matplotlib.pyplot as plt
-import cv2 
 import numpy as np
 from keras.preprocessing.image import ImageDataGenerator
 from keras.models import Sequential, load_model
@@ -17,7 +33,8 @@ image_gen = ImageDataGenerator(rotation_range=30,
                                horizontal_flip=True,
                                fill_mode='nearest')
 
-
+#In each convolutional layer, the size of each image is increased/decreased to the 
+#same size, 150x150 pixels
 input_shape=(150,150,3)
 model = Sequential()
 #As the images are complex, add 3 convolutional layers with max pooling
@@ -69,6 +86,7 @@ print(train_image_gen.class_indices)
 #use existing model trained using 100 epochs
 new_model = load_model('cat_dog_100epochs.h5')
 
+#Test the model to see if it correctly identifies a dog
 dog_file = 'CATS_DOGS/test/DOG/10008.jpg'
 dog_img = image.load_img(dog_file, target_size=(150,150))
 dog_img = image.img_to_array(dog_img)
@@ -78,6 +96,7 @@ dog_img = dog_img/255
 
 result =new_model.predict(dog_img)
 print("result={}".format(result))
+
 # Convert probabilities to class labels using argmax
 predicted_classes = np.argmax(result, axis=-1)
 
