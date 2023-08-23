@@ -1,7 +1,7 @@
 # Deep-Learning-For-Computer-Vision
 Deep Learning with Keras
 
-This project contains Python modules written in order to learn Deep Learning using Keras. 
+This project contains Python modules written while following the Udemy online course **Python for Computer Vision with OpenCV and Deep Learning**. 
 
 In the first module **1_Data_Classification.py**, Keras is used to create a machine learning module that can detect whether a banknote is a forgery or not.  The training data is numerical values in a CSV file.
 
