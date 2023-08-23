@@ -7,4 +7,4 @@ In the first module **1_Data_Classification.py**, Keras is used to create a mach
 
 In the second module **2_Keras_CNN_With_MNIST.py**, Keras is used to create a Convolutional Neural Network **CNN** to classify **grayscale** images of handwritten digits 0-9 in the MNIST dataset. 
 
-In the third module **3_Keras_CNN_With_CIFAR_10.py** keras is used to classify **colour** images. 
+In the third module **3_Keras_CNN_With_CIFAR_10.py** keras is used to classify **colour** images in the CIFAR-10 dataset. 
