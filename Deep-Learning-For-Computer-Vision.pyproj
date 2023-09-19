@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>b8d15d53-22b4-4cc1-aa40-5d7c2d366d00</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>1_Data_Classification.py</StartupFile>
+    <StartupFile>5_Deep_Learning_On_Custom_Images.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>

@@ -21,7 +21,19 @@ from keras.preprocessing.image import ImageDataGenerator
 from keras.models import Sequential, load_model
 from keras.layers import Activation, Dropout, Flatten, Conv2D, MaxPooling2D, Dense
 from keras.preprocessing import image
+import tensorflow as tf
 
+
+def random_brightness_and_contrast(image):
+    # This function applies random brightness and contrast adjustments to images
+
+    # Randomly adjust brightness
+    image = tf.image.random_brightness(image, max_delta=0.2)  # You can adjust the max_delta value
+
+    # Randomly adjust contrast
+    image = tf.image.random_contrast(image, lower=0.5, upper=1.5)  # You can adjust the lower and upper values
+
+    return image
 
 #Make the images none uniform with random transformations
 image_gen = ImageDataGenerator(rotation_range=30,
@@ -31,7 +43,8 @@ image_gen = ImageDataGenerator(rotation_range=30,
                                shear_range=0.2,
                                zoom_range=0.2,
                                horizontal_flip=True,
-                               fill_mode='nearest')
+                               fill_mode='nearest',
+                               preprocessing_function=random_brightness_and_contrast)
 
 #In each convolutional layer, the size of each image is increased/decreased to the 
 #same size, 150x150 pixels
